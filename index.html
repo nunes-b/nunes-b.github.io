@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rômulo Nunes Barbosa Peixoto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="language-selection">
+        <span data-en="Language" data-pt="Idioma">Idioma</span>
+        <a href="#" id="pt">[🇧🇷]</a>
+        <a href="#" id="en">[🇺🇸]</a>
+    </div>
+    <div class="notepad-window">
+        <div class="title-bar">
+            <span class="title" data-en="Untitled - Notepad" data-pt="Sem Título - Bloco de Notas">Sem Título - Bloco de Notas</span>
+            <div class="window-controls">
+                <span class="minimize">_</span>
+                <span class="maximize">□</span>
+                <span class="close">X</span>
+            </div>
+        </div>
+        <div class="menu-bar">
+            <span data-en="File" data-pt="Arquivo">File</span>
+            <span data-en="Edit" data-pt="Editar">Edit</span>
+            <span data-en="Search" data-pt="Search">Search</span>
+            <span data-en="Help" data-pt="Help">Help</span>
+        </div>
+        <div class="content resume">
+            <h1>Rômulo Nunes Barbosa Peixoto</h1>
+            <h2 data-en="About Me" data-pt="Sobre Mim">Sobre Mim</h2>
+            <p data-en="I'm a self-taught developer who began his programming journey through gaming in 2022, tinkering with Lua scripts to modify GTA V. Driven by an insatiable thirst for knowledge, my passion lies in crafting elegant solutions for intricate problems." data-pt="Sou um desenvolvedor autodidata que começou a jornada na programação através de jogos em 2022, mexendo com scripts Lua para modificar o GTA V. Impulsionado por uma sede insaciável por conhecimento, minha paixão está em criar soluções elegantes e escalaveis para pessoas e empresas.">Sou um desenvolvedor autodidata que começou a jornada na programação através de jogos em 2022, mexendo com scripts Lua para modificar o GTA V. Impulsionado por uma sede insaciável por conhecimento, minha paixão está em criar soluções elegantes e escalaveis para pessoas e empresas.
+
+            </p>
+            
+            <h2 data-en="Contact" data-pt="Contato">Contato</h2>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/romulonunesbpeixoto/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://api.whatsapp.com/send?phone=5521987535923" target="_blank">WhatsApp</a></li>
+                <li><a href="/Rômulo Nunes Barbosa Peixoto.pdf" download data-pt="Baixar Currículo" data-en="Download Resume">Download Currículo</a></li>
+            </ul>
+
+            <h2 data-en="Technologies" data-pt="Tecnologias">Tecnologias</h2>
+            <ul>
+                <li data-en="JavaScript, TypeScript, Python" data-pt="JavaScript, TypeScript, Python">JavaScript, TypeScript, Python</li>
+                <li data-en="Persistence with SQL and NoSQL: PostgreSQL, MySQL, MongoDB" data-pt="Persistência com SQL e NoSQL: PostgreSQL, MySQL, MongoDB">Persistência com SQL e NoSQL: PostgreSQL, MySQL, MongoDB</li>
+                <li data-en="Infrastructure: AWS (S3 and EC2), Docker, Google Cloud Platform (GCP) Storage" data-pt="Infraestrutura: AWS (S3 e EC2), Docker, Google Cloud Platform (GCP) Storage">Infraestrutura: AWS (S3 e EC2), Docker, Google Cloud Platform (GCP) Storage</li>
+                <li data-en="Frameworks: React, Express, Django, Django Rest Framework" data-pt="Frameworks: React, Express, Django, Django Rest Framework">Frameworks: React, Express, Django, Django Rest Framework</li>
+                <li data-en="Testing: TDD (Test-Driven Development) and E2E (End-to-End)" data-pt="Testes: TDD (Test-Driven Development) e E2E (End-to-End)">Testes: TDD (Test-Driven Development) e E2E (End-to-End)</li>
+            </ul>
+
+        </div>
+    </div>
+    <script>
+        document.getElementById('pt').addEventListener('click', function(event) {
+            event.preventDefault();
+            updateContent('pt');
+        });
+        
+        document.getElementById('en').addEventListener('click', function(event) {
+            event.preventDefault();
+            updateContent('en');
+        });
+        
+        function updateContent(language) {
+            const languageElements = document.querySelectorAll('[data-en], [data-pt]');
+
+            languageElements.forEach((element) => {
+                const content = language === 'en'
+                    ? element.getAttribute('data-en')
+                    : element.getAttribute('data-pt');
+
+                element.textContent = content;
+            });
+        }
+
+    </script>
+</body>
+</html>

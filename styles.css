@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #C0C0C0;
+}
+
+.notepad-window {
+    max-width: 600px;
+    height: auto;
+    border: 2px solid #000;
+    margin: 50px auto;
+    box-shadow: 5px 5px 0 #808080;
+    position: relative;
+}
+
+.title-bar {
+    background-color: #000080;
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-bar .title {
+    font-weight: bold;
+}
+
+.window-controls {
+    display: flex;
+}
+
+.window-controls span {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.menu-bar {
+    background-color: #C0C0C0;
+    padding: 5px;
+    border-bottom: 2px solid #808080;
+    display: flex;
+    gap: 20px;
+}
+
+.menu-bar span {
+    cursor: pointer;
+}
+
+.content {
+    padding: 10px;
+    background-color: white;
+    height: auto;
+    overflow-y: auto;
+    position: relative;
+}
+
+.content h1 {
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+.content h2 {
+    font-size: 1.2em;
+    margin-top: 20px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+}
+
+.content p, .content ul {
+    margin-bottom: 20px;
+}
+
+.content a {
+    color: blue;
+    text-decoration: underline;
+}
+
+.content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.content li {
+    margin-bottom: 10px;
+}
+
+.language-selection {
+    margin: 0 auto 20px auto;
+    padding: 5px;
+    text-align: center; 
+    display: flex;
+    align-items: center;
+}
+
+
+.language-selection a {
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.language-selection a:hover {
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
